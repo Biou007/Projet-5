@@ -1,0 +1,54 @@
+.collapse {
+  max-width: 950px;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* HEADER */
+.collapse_header {
+  height: 52px; // hauteur Figma
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.collapse_title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* FLÈCHE CSS */
+.arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 3px solid #ffffff;
+  border-bottom: 3px solid #ffffff;
+  transform: rotate(-135deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(45deg);
+}
+
+/* CONTENU */
+.collapse_content {
+  background-color: #f6f6f6;
+  padding: 20px;
+}
+
+.collapse_content p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  line-height: 1.5;
+}
