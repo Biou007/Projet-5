@@ -1,11 +1,9 @@
-import Header from "../components/Header";
-
 function NotFound() {
   return (
-    <>
-      <Header />
-      <h1>404 - Page introuvable</h1>
-    </>
+    <div>
+      <h1>404</h1>
+      {/* Eventuellement un lien pour retourner à l'accueil */}
+    </div>
   );
 }
 

@@ -1,12 +1,11 @@
-import Header from "../components/Header";
+import aboutImg from "../assets/image_about.png";
 import Banner from "../components/Banner";
 
 function About() {
   return (
     <>
-      <Header />
-      <Banner />
-      <h1>À propos</h1>
+      <Banner background={aboutImg} />
+      {/* Contenu de À propos */}
     </>
   );
 }

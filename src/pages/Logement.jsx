@@ -1,11 +1,9 @@
-import Header from "../components/Header";
-
 function Logement() {
   return (
-    <>
-      <Header />
+    <div>
       <h1>Logement</h1>
-    </>
+      {/* Ici plus tard tu afficheras les infos du logement avec l’ID */}
+    </div>
   );
 }
 
