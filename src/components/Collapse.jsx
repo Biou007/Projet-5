@@ -8,17 +8,15 @@ function Collapse({ title, content }) {
     <div className="collapse">
       <div className="collapse_header" onClick={() => setIsOpen(!isOpen)}>
         <h2 className="collapse_title">{title}</h2>
-
-        {/* FLÈCHE = élément vide, 100% CSS */}
         <span className={`arrow ${isOpen ? "open" : ""}`}></span>
       </div>
 
       {isOpen && (
         <div className="collapse_content">
           {Array.isArray(content) ? (
-            content.map((item, index) => <p key={index}>{item}</p>)
+            content.map((item, index) => <div key={index}>{item}</div>)
           ) : (
-            <p>{content}</p>
+            <div>{content}</div>
           )}
         </div>
       )}

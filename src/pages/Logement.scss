@@ -1,0 +1,187 @@
+/* Conteneur principal */
+.logement-page {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*Infos principales */
+.logement-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Côté gauche : titre, localisation, tags */
+.logement-info-left {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.logement-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0;
+  color: #ff6060;
+}
+
+.logement-location {
+  font-size: 16px;
+  color: #555555;
+  margin: 0;
+  font-weight: 500;
+}
+
+.logement-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.logement-tag {
+  background-color: #ff6060;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px 30px;
+  border-radius: 10px;
+}
+
+/*Côté droit : hôte + photo + rating */
+.logement-info-right {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.logement-host {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logement-host-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+}
+
+.logement-host-picture {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Rating étoiles */
+.logement-rating {
+  display: flex;
+  gap: 5px;
+}
+
+.star {
+  font-size: 20px;
+}
+
+.logement-star {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Collapses*/
+.logement-collapses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 76px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.logement-collapses > * {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ======================
+   RESPONSIVE
+   ====================== */
+@media (max-width: 767px) {
+  .logement-page {
+    padding: 0 0 20px 0;
+  }
+
+  .logement-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  /* Partie gauche inchangée */
+  .logement-info-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Host + Rating sur la même ligne */
+  .logement-info-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .logement-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logement-tag {
+    font-size: 10px;
+    padding: 5px 20px;
+  }
+
+  /* Étoiles à gauche */
+  .logement-rating {
+    order: 1;
+    display: flex;
+    gap: 6px;
+    flex: 0 0 auto;
+    width: auto;
+  }
+
+  /* 👤 Host à droite */
+  .logement-host {
+    order: 2;
+    max-width: 135px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 0 0 auto;
+  }
+
+  /*  Collapses en colonne */
+  .logement-collapses {
+    display: block !important;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .logement-collapses > * {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
