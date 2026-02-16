@@ -6,28 +6,30 @@ body,
   box-sizing: border-box;
   width: 100%;
   overflow-x: hidden;
+  height: auto;
 }
 
 .layout {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-main {
-  flex: 1;
+main.container {
   max-width: none;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.container {
   margin: 0;
   padding: 0 40px;
 }
+.main-content {
+  flex: 0 0 auto;
+}
 
 @media (max-width: 767px) {
-  .container {
+  main.container {
     padding: 0 20px;
+    margin: 0;
+  }
+
+  main {
+    padding: 0 0;
   }
 }

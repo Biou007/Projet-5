@@ -8,7 +8,7 @@ function Layout() {
     <div className="layout">
       <Header />
 
-      <main className="container">
+      <main className="container main-content">
         <Outlet />
       </main>
 

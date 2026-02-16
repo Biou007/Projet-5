@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Navigate } from "react-router-dom";
 import starActive from "../assets/star-active.svg";
 import starInactive from "../assets/star-inactive.svg";
 import Collapse from "../components/Collapse";
@@ -12,7 +12,9 @@ function Logement() {
   const logement = logements.find((log) => log.id === id);
 
   // Vérification simple (au cas où)
-  if (!logement) return <p>Logement introuvable</p>;
+  if (!logement) {
+    return <Navigate to="/404" replace />;
+  }
 
   const totalStars = 5;
   const rating = Number(logement.rating);
