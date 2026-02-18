@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 70px;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 70px 20px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
@@ -33,10 +33,13 @@
 
 @media screen and (max-width: 767px) {
   .notfound {
-    max-width: 375px;
+    max-width: 767px;
+    width: 100%;
     gap: 80px;
-    padding: 50px;
+    padding: 50px 50px 70px 50px;
+    box-sizing: border-box;
   }
+
   .notfound_title {
     font-size: 120px;
   }

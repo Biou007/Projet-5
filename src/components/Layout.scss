@@ -12,12 +12,14 @@ body,
 .layout {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 main.container {
   max-width: none;
   margin: 0;
   padding: 0 40px;
+  flex: 1;
 }
 .main-content {
   flex: 0 0 auto;
@@ -26,10 +28,5 @@ main.container {
 @media (max-width: 767px) {
   main.container {
     padding: 0 20px;
-    margin: 0;
-  }
-
-  main {
-    padding: 0 0;
   }
 }
